@@ -4,8 +4,6 @@ import java.util.Queue;
 
 public class Traversal {
 
-    
-
     // BFS for connected, undirected and unweighted graph
     public static ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
             int V = adj.size();
@@ -42,7 +40,6 @@ public class Traversal {
         int V = 5;
         int [][] edges = {{0, 1}, {1, 2}, {0,2} , {1,3}, {2,4}, {3,4}};
         ArrayList<ArrayList<Integer>> adj = GraphImpl.createAdjancencyList(V, edges);
-
         
         boolean [] visited = new boolean[V]; 
         ArrayList<Integer> results = new ArrayList<>();
