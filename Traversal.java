@@ -5,6 +5,13 @@ import java.util.Queue;
 public class Traversal {
 
     // BFS for connected, undirected and unweighted graph
+    /**
+     * Perform BFS traversal starting from vertex 0 and return visit order.
+     * Assumes graph is connected; if not, only the component containing 0 is returned.
+     *
+     * @param adj adjacency list representation of the graph
+     * @return list of vertices in the order they were visited by BFS
+     */
     public static ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
             int V = adj.size();
             boolean [] visited = new boolean[V];
@@ -26,6 +33,14 @@ public class Traversal {
             }
             return results;
     }
+    /**
+     * Depth-first traversal (recursive) that records visit order.
+     *
+     * @param adj adjacency list
+     * @param src starting vertex for this DFS call
+     * @param visited boolean array tracking visited vertices
+     * @param results list to append visit order to
+     */
     public static void dfs(ArrayList<ArrayList<Integer>> adj, int src, boolean [] visited, ArrayList<Integer> results) {
         visited[src] = true;
         results.add(src);

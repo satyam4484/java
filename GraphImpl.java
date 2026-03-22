@@ -1,9 +1,20 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Small utility class demonstrating adjacency matrix/list creation for graphs.
+ */
 public class GraphImpl {
     
     // Adjacency Matrix representation of graph
+    /**
+     * Create an adjacency matrix representation for a graph with V vertices.
+     * For undirected graphs the matrix is symmetric.
+     *
+     * @param V number of vertices (0-based indexing)
+     * @param edges list of directed/undirected edges where each entry is [u, v]
+     * @return adjacency matrix as a list of rows where 1 indicates an edge
+     */
     public static ArrayList<ArrayList<Integer>> createAdjancencyMatrix(int V, int [][] edges) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
@@ -24,6 +35,13 @@ public class GraphImpl {
         return adj;
     }
 
+    /**
+     * Create an adjacency list representation for a graph.
+     *
+     * @param V number of vertices
+     * @param edges list of edges where each entry is [u, v]
+     * @return adjacency list where adj.get(u) contains neighbors of u
+     */
     public static ArrayList<ArrayList<Integer>>createAdjancencyList(int V, int [][] edges) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
